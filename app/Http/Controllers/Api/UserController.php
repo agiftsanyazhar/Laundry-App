@@ -23,7 +23,7 @@ class UserController extends Controller
     {
         $data = $request->only(['name', 'email', 'password']);
 
-        $data['username'] = Str::lower($request->name);
+        $data['username'] = Str::of($request->name)->slug('');
 
         $request->validate([
             'name' => 'required|min:4',
