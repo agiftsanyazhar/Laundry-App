@@ -49,5 +49,5 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Shop
     Route::get('/shop/recommendation/limit', [ShopController::class, 'readRecommendationLimit'])->name('shop-recommendation');
-    Route::get('/shop/seacrh/city/{name}', [ShopController::class, 'searchByCity'])->name('shop-seacrh-city');
+    Route::get('/shop/search/city/{name}', [ShopController::class, 'searchByCity'])->name('shop-seacrh-city');
 });
